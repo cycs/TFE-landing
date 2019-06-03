@@ -1,0 +1,27 @@
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+}
+.loading__logo {
+    width: 30vw;
+}
+
+.loading__logo__arrow {
+    animation: arrowRotate infinite 12s linear;
+    transform-origin: 50% 50%;
+}
+
+@keyframes arrowRotate {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+
+    }
+}

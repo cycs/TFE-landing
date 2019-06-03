@@ -1,0 +1,25 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 1.65rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--bronzetone);
+}
+
+button {
+    border: none;
+    background: none;
+    position: relative;
+    z-index: 1;
+
+    overflow: hidden;
+
+}

@@ -1,0 +1,94 @@
+:root {
+    --gutter: 1.8rem;
+}
+
+.ctn {
+    display: flex;
+    padding-right: 9.85vw;
+    padding-left: 9.85vw;
+    /* float:left; */
+    /* flex-wrap: wrap; */
+	
+}
+
+.ctn .col+.col {
+    margin-left: var(--gutter);
+}
+
+.ctr {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .col:first-child { margin-left: 0; } */
+
+.col-1 {
+    width: calc((100% - var(--gutter)) / 12);
+}
+
+.col-2 {
+    width: calc(((100% - var(--gutter)) / 12) * 2);
+}
+
+.col-3 {
+    width: calc(((100% - var(--gutter)) / 12) * 3);
+}
+
+.col-4 {
+    width: calc(((100% - var(--gutter)) / 12) * 4);
+}
+
+.col-5 {
+    width: calc(((100% - var(--gutter)) / 12) * 5);
+}
+
+.col-6 {
+    width: calc(((100% - var(--gutter)) / 12) * 6);
+}
+
+.col-7 {
+    width: calc(((100% - var(--gutter)) / 12) * 7);
+}
+
+.col-8 {
+    width: calc(((100% - var(--gutter)) / 12) * 8);
+}
+
+.col-9 {
+    width: calc(((100% - var(--gutter)) / 12) * 9);
+}
+
+.col-10 {
+    width: calc(((100% - var(--gutter)) / 12) * 10);
+}
+
+.col-11 {
+    width: calc(((100% - var(--gutter)) / 12) * 11);
+}
+
+.col-12 {
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1130px) {
+    .ctn .col+.col {
+        margin-left: 0;
+    }    
+
+    .t-col-8 {
+        width: calc(((100% - var(--gutter)) / 12) * 8);
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .ctn .col+.col {
+        margin-left: 0;
+    }    
+
+    .m-col-12 {
+        width: 100%;
+    }
+    
+}

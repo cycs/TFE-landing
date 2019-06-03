@@ -1,13 +1,185 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-size: 1.8rem;
+    margin: 0;
+    font-family: 'Mukta-Regular', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--bronzetone);
+    background: var(--oldLace);
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 1.6;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.subtitle {
+    font-weight: 700;
+    font-size: 4.2rem;
+    position: relative;
+    z-index: 1;
+    max-width: fit-content;
+}
+
+.subtitle:after {
+    content: '';
+
+    position: absolute;
+    display: block;
+    width: 80%;
+    height: 50%;
+    right: -8px;
+    bottom: 0;
+    opacity: 1;
+
+    background-image: url('./svg/hover-link.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    z-index: -1;
+    transition: 0.3s ease-out;
+    transform-origin: 50% 50%;
+}
+
+@media screen and (max-width: 550px) {
+    .subtitle {
+        font-size: 3.6rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .subtitle {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .subtitle {
+        font-size: 2.6rem;
+    }
+}
+
+.underline {
+    position: relative;
+    overflow: hidden;
+}
+
+.underline:after {
+    content: '';
+
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 300px;
+    bottom: 7px;
+    background: rgba(74, 44, 14, .24);
+}
+
+a {
+    position: relative;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    z-index: 1;
+}
+
+a:after {
+    content: '';
+
+    position: absolute;
+    display: block;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+
+    background-image: url('./svg/hover-link.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    opacity: 0;
+    z-index: -1;
+    transition: 0.3s ease-out;
+    transform-origin: 50% 50%;
+}
+.oldLace:after {
+    background-image: url('./svg/hover-link-oldlace.svg');
+}
+
+a:hover:after,
+a:active:after {
+    width: 90%;
+    height: 10px;
+    right: -8px;
+    opacity: 1;
+
+    transition: 0.3s ease-out;
+
+}
+
+a.externalLink {
+    /* display: block; */
+    /* width: 100%;     */
+    /* height: 100%;     */
+}
+
+a.externalLink:after {
+    display: none;
+}
+
+a.externalLink:hover:after,
+a.externalLink:active:after {
+    width: initial;
+    height: initial;
+    right: initial;
+    opacity: 1;
+
+    transition: none;
+}
+button:hover {
+    color: var(--oldLace);
+
+    transition: 0.3s ease;
+}
+button:hover a{
+    color: var(--oldLace);
+}
+
+button:after {
+    content: '';
+
+    position: absolute;
+    display: block;
+    width: 200%;
+    height: 300%;
+    left: 50%;
+    top: 50%;
+
+    background-image: url('./svg/hover-link-darker.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    z-index: -1;
+    transition: 0.5s ease-out;
+    transform-origin: 50% 50%;
+    opacity: 0;
+    transform: translate(0, 0) scale(0);
+
+}
+
+button:hover:after {
+   
+    opacity: 1;
+
+    transform: translate(-50%, -50%) scale(1);
 }

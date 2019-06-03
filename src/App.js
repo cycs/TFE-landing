@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react'
+// import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from './components/Header'
+import Map from './components/Map'
+import Principles from './components/Principles'
+import Download from './components/Download';
+import Footer from './components/Footer';
+
+export default class App extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            isLoading: true
+        }
+    }
+    
+    componentDidMount() {
+        // setTimeout(() => this.setState({ isLoading: false }), 3000)
+        
+    }
+
+  render() {
+    // if (this.state.isLoading) return <Loading />
+
+    return (
+        <div className="App">
+            <Header />
+            <Map />
+            <Principles />
+            <Download />
+            <Footer />
+        </div>
+    )
+  }
 }
 
-export default App;

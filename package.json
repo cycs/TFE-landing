@@ -2,10 +2,20 @@
   "name": "landing",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
+    "animejs": "^3.0.1",
+    "gsap": "^2.1.2",
+    "mapbox-gl": "^0.54.0",
+    "normalize.css": "^8.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-mapbox-gl": "^4.4.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.0.1",
+    "react-scroll": "^1.7.11",
+    "react-svg-morph": "^0.2.1",
+    "snapsvg": "^0.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
