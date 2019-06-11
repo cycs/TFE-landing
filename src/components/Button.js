@@ -15,7 +15,7 @@ export default class Button extends Component {
     render() {
         return (
             <button className='button'> 
-                <a className='externalLink' href="https://www.dropbox.com/s/dtka2lhxbw59fjs/caligo-beta-v1.3.apk?dl=0">
+                <a className='externalLink' href="https://www.dropbox.com/s/vtt29g1wmui54ok/caligo-v1.2.0.apk?dl=0">
                     {this.props.text}
                 </a>
             </button>
